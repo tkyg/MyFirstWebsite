@@ -1,6 +1,6 @@
 function two() {
     for (i = 0; i < elements.length; i++) {
-      elements[i].style.flex = "25%";
+      elements[i].style.flex = "%";
     }
   }
 
@@ -16,9 +16,11 @@ function lewisHamilton() {
   document.getElementById("lewis").innerHTML="Lewis Hamilton is from United Kingdom, and he is 36 years old";
 }
 
-const driverNames = ["Max Verstappen", "Lewis Hamilton", "Valtteri Bottas"];
-function driver(name, team, age) {
-    return name;
-    return team;
-    return age; 
+
+function driver(name, age, country) {
+    console.log(`${name} is ${age} years old, and he is from ${country}`);
 }
+
+driver("Max Verstappen", 24, "Netherlands");
+driver("Lewis Hamilton", 36, "United Kingdom");
+document.getElementById('demo').innerHTML = driver(name, age, country);
